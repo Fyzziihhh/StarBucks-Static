@@ -1,0 +1,646 @@
+@font-face {
+  font-family: ui;
+  src: url(/StarBucksClone/segoe-ui.woff);
+}
+@font-face {
+  font-family: Sodo;
+  src: url(/SoDoSans-SemiBold.woff);
+}
+@font-face {
+  font-family: SodoLight;
+  src: url(/SoDoSans-Light.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#Main {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#header {
+  position: fixed;
+  top: 0;
+  padding: 5px 120px;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0px 1px 2px rgb(229, 229, 229);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  gap: 60px;
+  z-index: 1000;
+}
+#header img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  /* margin-top: -12px; */
+}
+#navContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 14px;
+}
+#navContent #navText a {
+  margin-right: 60px;
+
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  color: #212529;
+  font-weight: lighter;
+  font-size: 17px;
+}
+#navRight {
+  display: flex;
+  align-items: center;
+}
+
+#navRight > img {
+  width: 35px;
+  height: 35px;
+  margin-right: 26px;
+}
+#searchBar {
+  width: 280px;
+  height: 35px;
+  box-shadow: 0 0px 2px 1px rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-right: 90px;
+}
+
+#searchBar img {
+  width: 20px;
+  height: 20px;
+}
+
+#searchBar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+#searchBar input::placeholder {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: grey;
+  opacity: -0.5px;
+}
+#remainderBox {
+  color: #ffff;
+  padding: 5px 120px;
+  width: 100%;
+  height: 80px;
+
+  background-color: #1e3932;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  font-weight: 100;
+}
+#remainderBox p {
+  font-size: 20px;
+  font-weight: 100;
+  font-family: ui;
+
+}
+#MainBody{
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Add overflow property to contain floated elements */
+  /* height: 100vw; Remove or adjust the height property */
+}
+
+
+.button {
+  padding: 7px 15px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #ffff;
+  font-weight: 700;
+  margin-right: 40px;
+}
+#recommendationBox {
+  width: 100%;
+  height: 350px;
+  background-color:#EDEBE9;
+ 
+  margin-top: 30px;
+  padding: 5px 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+}
+#recommendationBox > img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 57px;
+  height: 70px;
+}
+
+#recommendationText{
+display: flex;
+justify-content: space-between;
+height: inherit;
+margin-top: 30px;
+font-family: sans-serif;
+
+}
+#recommendationText h4{
+  color:#1E3932 ;
+  font-size: 23px;
+  font-weight: 800;
+}
+#recommendationText p{
+  color:#007554 ;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: ui;
+}
+#foodRecommendation{
+  width: 80%;
+height: 170px;
+margin-top: 20px;
+padding: 0 20px;
+display: flex;
+gap: 30px;
+/* background-color: #212529; */
+position: absolute;
+top: 23%;
+}
+
+
+.foodRecommendationBox{
+  width: 35%;
+  height: 170px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px 25px;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  
+}
+.foodRecommendationBox #btnleft{
+  position: absolute;
+  left: -20px;
+  top: 34%;
+
+}
+.foodRecommendationBox #btnright{
+  position: absolute;
+  right: -20px;
+  top: 34%;
+
+}
+
+.foodDetails img{
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.priceAndotherOptions{
+
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+
+}
+.addBtn{
+ padding: 10px 22px;
+ background-color:#00754A;
+ color: #fff;
+ border: none;
+ font-family: ui;
+ border-radius: 20px;
+ font-size: 15px;
+ font-weight: 700;
+ /* text-align: center; */
+
+
+}
+.addBtn:hover{
+  background-color:#00482e ;
+}
+.priceAndotherOptions p{
+  font-size: 15px;
+  font-weight: 600;
+  font-family: ui;
+}
+.foodCategory {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.foodDetails{
+  display: flex;
+
+}
+
+
+.foodCategory .foodimage{
+  width: 16px;
+  height: 16px;
+  border: 1px solid red;
+}
+
+.foodimage img{
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* object-position: 50% 20%; */
+}
+.foodCategory h5{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: ui;
+  font-weight: 700;
+
+}
+.foodCategory p{
+  font-size: 8px;
+  color: #939393;
+  /* letter-spacing: ; */
+  }
+
+  #DessertContainer{
+    padding: 5px 135px;
+    width: 100%;
+    height: 230px;
+    margin: 80px 0;
+    position: relative;
+   
+  }
+  #DessertBox{
+   border-radius: 8px;
+    background-color: #DFC49D;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+  #DessertImgBox{
+    width: 15%;
+    height: inherit;
+
+  }
+  #DessertImgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: -25px;
+    margin-top: 5px;
+
+  }
+  #DessertDetailsBox{
+    width: 85%;
+
+
+  }
+
+  .DessertText{
+font-size: 15px;
+    margin: 20px 0;
+font-weight:600;
+color: #41392E;
+font-family: ui;
+  }
+  #DessertDetailsText h3{
+    font-size: 22px;
+    font-family: ui;
+    font-weight:bolder ;
+  }
+  #DessertPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+margin-bottom: 30px;
+  }
+  #DessertPrice p{
+    font-size: 14px;
+  color: #000000;
+  opacity: 0.5;
+  }
+  #DessertPrice p  span{
+    color: black;
+    font-weight: 900;
+    opacity: 1;
+    font-family: ui;
+
+  }
+  #OrderNowBtn{
+    padding: 15px 70px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 20px;
+    font-family: ui;
+    font-weight: 600;
+
+  }
+  #DessertBox >img:first-child{
+    /* width: 40px;
+    height: 40px; */
+    position: absolute;
+    left: -35px;
+    top: 34%;
+  }
+  #DessertBox img:nth-child(2){
+    position: absolute;
+    right: -35px;
+    top: 34%;
+    
+  }
+  #HandCraftedCategories {
+    padding: 5px 140px;
+  
+    width: 100%;
+    height: 200px;
+    display: flex;
+    gap:90px;
+  }
+  .HeadingLabel{
+
+    font-size: 25px;
+    margin-bottom: 10px;
+  color: #1E3932;
+    font-weight: 900;
+font-family: SoDoSans_Bold, Helvetica, sans-serif;
+padding: 5px 140px;
+
+  }
+  .HandCraftedCategory{
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+ 
+  }
+  .HandCraftedCategory img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+
+     border-radius: 50%;
+
+  }
+  .HandCraftedCategory p{
+
+    font-family: ui;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .beveragesContainer{
+margin-top: 40px;
+    width: 100%;
+    height: 350px;
+margin-bottom: 90px;
+    padding: 0 140px;
+    position: relative;
+ 
+
+  }
+
+ .beverageBoxes{
+  width: 100%;
+  height: 100%;
+  display: flex;
+gap: 30px;
+align-items: center;
+ }
+ .beverageBoxes .btnleft{
+  position: absolute;
+  top: 0;
+  left: 6.6%;
+  top: 42%;
+ }
+ .beverageBoxes .btnright{
+  position: absolute;
+  top: 0;
+  right: 10.6%;
+  top: 42%;
+ }
+
+
+  .beverageBox{
+    width: 30%;
+    height: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:0 0 5px 1px #8c8c8c;
+  }
+  .beverageBox  img{
+    width: 100%;
+    height: 45%;
+    object-fit:cover;
+  }
+  .beverageDetails{
+    padding: 12px 24px 18px;
+    background-color: #F9F9F9;
+  }
+  .beverageCategory{
+    width: 16px;
+    height: 16px;
+    border: 1px solid red;
+  }
+  .beverageCategory img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.beverageDetails .beverageHead{
+font-size: 17px;
+font-weight: 800;
+font-family:ui;
+
+
+}
+.beverageDetails .beverageQuantity{
+  font-size: 10px;
+  font-family: ui;
+  color: #444;
+  font-weight: 800;
+  opacity: .7;
+  margin-top: 5px;
+  /* letter-spacing: -.1px; */
+}
+.beverageDetails .beverageDesc{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #000000de;
+    font-size: 11.8px;
+    margin:10px 0;
+}
+.beveragePriceAndBtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+padding: 15px ;
+}
+.beveragePrice{
+  font-weight: 800;
+  font-family: ui;
+}
+.MoreAboutCoffee{
+  width: 100%;
+height:530px;
+background-color: #EDEBE9;
+padding: 0px 140px;
+
+}
+
+.MoreAboutCoffeeText{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.MoreAboutCoffeeText h3{
+  
+  font-size: 30px;
+  margin-bottom: 10px;
+color: #1E3932;
+  font-weight: 900;
+font-family:Sodo, Helvetica, sans-serif;
+margin-top: 30px;
+  
+}
+.MoreAboutCoffeeText p{
+  font-family: Sodo, Helvetica, sans-serif;
+  font-weight: 800;
+  color: #444;
+  font-size: 12px;
+}
+.CoffeeBackground{
+  width: 95%;
+  height: 400px;
+  background-color: black;
+  border-radius: 10px;
+  background-image: url(/StarBucksClone/Assets/ICW_Live_Event_Day5_41f11ca3d2\ \(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  position: relative;
+}
+.CoffeeBackground div{
+  color: #fff;
+  padding-left: 30px;
+  /* margin-bottom: 50px; */
+}
+.CoffeeBackground div h3{
+  font-size: 32px;
+  font-family: Sodo, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-bottom:15px;
+}
+.CoffeeBackground div p{
+  font-family:Helvetica, sans-serif;
+  font-size: 15px;
+  margin-bottom: 45px;
+
+
+}
+.CoffeeBackground div button{
+  padding: 10px 80px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-left: 40px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+.CoffeeBackground img:first-child{
+  position: absolute;
+  top: 45%;
+  left: -35px;
+}
+.CoffeeBackground img:nth-child(2){
+  position: absolute;
+  top: 45%;
+  right: -35px;
+}
+
+#Footer{
+  width: 100%;
+  height: 105vh;
+  background-color: #0E382C;
+  padding: 130px 150px;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 80px;
+  color: #ffff;
+  
+}
+#Footer  img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+
+}
+#Footer ul{
+  list-style: none;
+
+}
+#Footer h4{
+  font-family: Sodo;
+  font-size: 21px;
+  font-weight: 800;
+
+}
+#Footer ul li{
+  font-family: SodoLight, Helvetica, sans-serif;
+  margin-top: 25px;
+  color:#c9c9c9;
+  font-family:  Helvetica, sans-serif;
+  
+}
+.SocialMediaLogo{
+  display: flex;
+
+
+}
+.socialmedia{
+  margin-right: 20px;
+  margin-top: 20px;
+ 
+ 
+}
+#appstoreIOS{
+  margin-bottom: -30px;
+  width: 100px;
+  height: 60px;
+}
+
+
+
+
