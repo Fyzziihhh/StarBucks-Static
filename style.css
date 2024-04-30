@@ -1,14 +1,14 @@
 @font-face {
   font-family: ui;
-  src: url(/StarBucksClone/segoe-ui.woff);
+  src: url(segoe-ui.woff);
 }
 @font-face {
   font-family: Sodo;
-  src: url(/SoDoSans-SemiBold.woff);
+  src: url(SoDoSans-SemiBold.woff);
 }
 @font-face {
   font-family: SodoLight;
-  src: url(/SoDoSans-Light.woff);
+  src: url(segoe-ui.woff);
 }
 * {
   margin: 0;
@@ -542,7 +542,7 @@ margin-top: 30px;
   height: 400px;
   background-color: black;
   border-radius: 10px;
-  background-image: url(/StarBucksClone/Assets/ICW_Live_Event_Day5_41f11ca3d2\ \(1\).jpg);
+  background-image: url(Assets/ICW_Live_Event_Day5_41f11ca3d2\ \(1\).jpg);
   background-position: center;
   background-size: cover;
   display: flex;
